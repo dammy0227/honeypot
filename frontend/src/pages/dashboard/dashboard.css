@@ -1,0 +1,106 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1a1a2e;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  flex: 20%;
+}
+
+.logo {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  background: #2a2a40;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+  background-color: #3944bc;
+  color: #fff;
+}
+
+.main-content {
+  flex: 80%;
+  padding: 30px;
+  background-color: #f5f7fa;
+  overflow: auto;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  color: #333;
+}
+
+/* ====================== */
+/* 📱 Mobile Responsiveness */
+/* ====================== */
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    flex: none;
+    box-shadow: none;
+  }
+
+  .sidebar nav ul {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.sidebar nav ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.sidebar nav ul li {
+  flex: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 5px;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+  .logo {
+    display: none; /* Hide logo to save space */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.1em;
+    text-align: center;
+  }
+}

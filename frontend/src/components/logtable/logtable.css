@@ -1,0 +1,61 @@
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  min-width: 600px; /* Ensure it scrolls on small screens */
+}
+
+.log-table th,
+.log-table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.log-table th {
+  background-color: #3944bc;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.log-table pre {
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.log-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.log-table tr:hover {
+  background-color: #eef3ff;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .log-table {
+    font-size: 12px;
+    min-width: unset;
+  }
+
+  .log-table th,
+  .log-table td {
+    padding: 8px 6px;
+  }
+
+  .log-table th:nth-child(4),
+  .log-table td:nth-child(4),
+  .log-table th:nth-child(6),
+  .log-table td:nth-child(6) {
+    display: none; /* Hide Payload and User Agent on mobile for simplicity */
+  }
+}
